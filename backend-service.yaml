@@ -1,0 +1,14 @@
+#backend
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  namespace: pnt-quiz
+spec:
+  selector:
+    app: backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: ClusterIP
